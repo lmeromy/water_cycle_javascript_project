@@ -9,27 +9,32 @@
 <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>Explore the Water Cycle!</h1>
 
-  <div id="image-container">
-    <img src="./images/WaterCycle05.jpg" alt="" usemap="#WaterCyleMap" />
-<map name="WaterCycleMap" id="WaterCyleMap">
-    <area alt="groundwater" id ="groundwater" shape="rect" coords="423,1157,761,1295" />
-    <area alt="forest" id="forest" shape="rect" coords="86,917,380,1188" />
-    <area alt="precipitation" id="precipitation" shape="rect" coords="66,432,511,538" />
-    <area alt="clouds" id="clouds" shape="rect" coords="288,123,740,393" />
-    <area alt="mountains" id="mountains" shape="rect" coords="384,636,789,782" />
-    <area alt="rivers" id="rivers" shape="rect" coords="809,1050,1285,1159" />
-    <area alt="ocean" id="ocean" href="javascript:void(0)" shape="rect" coords="1474,1067,1865,1251" />
-    <area alt="evaporation" id="evaporation" shape="rect" coords="1497,495,1865,889" />
-    <area alt="cities" id="cities" shape="rect" coords="1086,637,1377,1024" />
-</map>
+<div id="water-cycle-container">
+  <div id="buttons">
 
-    <div id="text-container">
-      <p>Here is some text about the water cycle</p>
-    </div>
+    <input type="button" value="Ocean" id="Ocean">
+    <input type="button" value="Evaporation" id="Evaporation">
+    <input type="button" value="Clouds" id="Clouds">
+    <input type="button" value="Precipitation" id="Precipitation">
+    <input type="button" value="Mountains" id="Mountains">
+    <input type="button" value="Forests" id="Forests">
+    <input type="button" value="Lakes and Rivers" id="Lakes-and-Rivers">
+    <input type="button" value="Groundwater" id="Groundwater">
+    <input type="button" value="Cities" id="Cities">
 
   </div>
+
+
+  <div id="text-container">
+      <p>Here is some text about the water cycle</p>
+  </div>
+
+  <div id="image-container">
+      <img src="./images/WaterCycle05.jpg" usemap="#WaterCycleMap" />
+  </div>
+
+</div>
 
 </body>
 </html>
