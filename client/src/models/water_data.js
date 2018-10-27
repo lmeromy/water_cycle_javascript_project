@@ -12,11 +12,10 @@ WaterData.prototype.getData_h2o_cycle = function () {
   request.get()
   .then((cycleElements) => {
     PubSub.publish('WaterData:all-cycle-elements-loaded', cycleElements);
-    console.log(cycleElements);
+    // console.log(cycleElements);
   })
    .catch(console.error);
 };
-
 
 
 module.exports = WaterData;
