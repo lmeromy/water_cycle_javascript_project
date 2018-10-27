@@ -43,7 +43,8 @@ db.water_cycle.insertMany([
 db.water_use.insertMany([
   {
     name: "avgUKUser",
-    diet: 2,
-    brushteeth: 3
+    teeth: 15,
+    flush: 45,
+    bathe: 85
   }
 ]);
