@@ -15,6 +15,7 @@ WaterUseInputView.prototype.handleSubmit = function (evt) {
   evt.preventDefault();
   const newWaterUser = this.createWaterUser(evt.target);
   PubSub.publish('WaterUseInputView:water-user-submit', newWaterUser);
+  // console.log('water use input:', newWaterUser);
   evt.target.reset;
 };
 
@@ -22,11 +23,12 @@ WaterUseInputView.prototype.handleSubmit = function (evt) {
 WaterUseInputView.prototype.createWaterUser = function (input) {
   const newWaterUser = {
     name: "inputUser",
-    teeth: input[0].value,
-    flush: input[1].value,
-    bathe: input[2].value
+    teeth: Number(input[0].value), //ask about these values([0], [1], etc)
+    flush: Number(input[1].value),
+    bathe: Number(input[2].value)
   }
   return newWaterUser;
+
 };
 
 

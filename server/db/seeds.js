@@ -46,5 +46,11 @@ db.water_use.insertMany([
     teeth: 15,
     flush: 45,
     bathe: 85
+  },
+  {
+    name: "newUser",
+    teeth:0,
+    flush:0,
+    bathe:0
   }
 ]);
