@@ -10,6 +10,7 @@ WaterData.prototype.bindEvents = function () {
 
   PubSub.subscribe('WaterUseInputView:water-user-submit', (event) => {
     this.postUserInput(event.detail);
+    // console.log('water data:', event.detail);
   });
 
 
@@ -26,12 +27,13 @@ WaterData.prototype.getData_h2o_cycle = function () {
    .catch(console.error);
 };
 
-
+// SENDING USER INPUT TO THE DATABASE
 WaterData.prototype.postUserInput = function (input) {
-  this.request.post(input)
+  const request = new Request(this.url);
+  request.post(input)
   .then((uses) => {
     PubSub.publish('WaterData:water-user-ready', uses);
-    console.log('published user input:', uses);
+    // console.log('published user input:', uses);
   })
   .catch(console.error);
 };
