@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const waterUseUrl = 'http://localhost:3000/api/water-use';
     const waterUse = new WaterData(waterUseUrl);
-    waterUse.getData_h2o_use();
+    // waterUse.getData_h2o_use();
     waterUse.bindEvents();
 
 });
