@@ -50,7 +50,7 @@ WaterUseChart.prototype.render = function (chartArray) {
           bar: {groupWidth: "95%"},
           legend: { position: "none" },
         };
-        var chart = new google.visualization.ColumnChart(document.getElementById("water-use-chart"));
+        var chart = new google.visualization.ColumnChart(document.getElementById("water-use-vis-chart"));
         chart.draw(view, options);
     }
 
