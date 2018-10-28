@@ -7,29 +7,32 @@ const WaterUseChart = function(container){
 WaterUseChart.prototype.bindEvents = function () {
   PubSub.subscribe('WaterData:water-users-ready', (event) => {
     // console.log('from chartview', test = event.detail);
-    this.prepare(event.detail);
+    const chartArray = this.prepare(event.detail);
+    this.render(chartArray)
   })
-  this.render()
+
 };
 
 WaterUseChart.prototype.prepare = function (data) {
   // console.log('Data', test = data);
   const avgUser = data[0].bathe + data[0].teeth + data[0].flush;
-  const newUser = data[-1].bathe + data[-1].teeth + data[-1].flush;
+  const newUser = data[data.length-1].bathe + data[data.length-1].teeth + data[data.length-1].flush;
+
+  const chartArray = [avgUser, newUser];
+  return chartArray;
 
 };
 
-WaterUseChart.prototype.render = function () {
+WaterUseChart.prototype.render = function (chartArray) {
 
   google.charts.load("current", {packages:['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Element", "Density", { role: "style" } ],
-          ["Copper", 8.94, "#b87333"],
-          ["Silver", 10.49, "silver"],
-          ["Gold", 19.30, "gold"],
-          ["Platinum", 21.45, "color: #e5e4e2"]
+          ["Avg Water Use", "Your Water Use", { role: "style" } ],
+          ["Av Water Use", chartArray[0], "#b87333"],
+          ["Your Water Use", chartArray[1], "silver"]
+
         ]);
 
         var view = new google.visualization.DataView(data);
@@ -41,7 +44,7 @@ WaterUseChart.prototype.render = function () {
                          2]);
 
         var options = {
-          title: "Density of Precious Metals, in g/cm^3",
+          title: "Compare your water use",
           width: 600,
           height: 400,
           bar: {groupWidth: "95%"},
