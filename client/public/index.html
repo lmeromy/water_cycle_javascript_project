@@ -12,100 +12,86 @@
 </head>
 <body>
 
-
-
-  <div id="intro">
-    <p>What is the water cycle? It is the path water takes through our world as it moves from one place to another. Water is special because it exists in 3 different states: solid (snow and ice), liquid (like the water you drink), and gas (the air is full of tiny water molecules called water vapour). Click on the different elements of the Water Cycle to find out more!</p>
-  </div>
+  <header>
+    <h2>The Water Cycle</h2>
+    <div>
+      <p>What is the water cycle? It is the path water takes through our world as it moves from one place to another. Water is special because it exists in 3 different states: solid (snow and ice), liquid (like the water you drink), and gas (the air is full of tiny water molecules called water vapour). Click on the different elements of the Water Cycle to find out more!</p>
+    </div>
+  </header>
 
   <div id="water-cycle-container">
-    <div id="buttons">
-      <div>
-        <input type="button" value="Ocean" id="Ocean">
-        <input type="button" value="Evaporation" id="Evaporation">
-        <input type="button" value="Clouds" id="Clouds">
-        <input type="button" value="Precipitation" id="Precipitation">
-        <input type="button" value="Mountains" id="Mountains">
-        <input type="button" value="Forests" id="Forests">
-        <input type="button" value="Lakes and Rivers" id="Lakes-and-Rivers">
-        <input type="button" value="Groundwater" id="Groundwater">
-        <input type="button" value="Cities" id="Cities">
+
+    <div id="text-container">
+    </div>
+
+    <div id="image-container">
+      <img src="../images/WaterCycle05.jpg" usemap="#image-map"/>
+      <map name="image-map">
+        <area alt="" id="Clouds" shape="rect" coords="126,69,390,206"/>
+        <area alt="" id="Precipitation" shape="rect" coords="29,215,242,277" />
+        <area alt="" id="Mountains" href="#" shape="rect" coords="116,302,449,384" />
+        <area alt="" id="Forests" href="#" shape="rect" coords="41,451,192,590" />
+        <area alt="" id="Lakes-and-Rivers" href="#" shape="rect" coords="361,515,689,572" />
+        <area alt="" id="Groundwater" href="#" shape="rect" coords="207,538,355,641" />
+        <area alt="" id="Cities" href="#" shape="rect" coords="533,318,692,502" />
+        <area alt="" id="Evaporation" href="#" shape="rect" coords="739,239,915,445" />
+        <area alt="" id="Ocean" href="#" shape="rect" coords="730,496,935,635" />
+      </map>
+    </div>
+
+    <div id="water-use-content">
+      <p>
+        Why do we care about the water cycle? Do you know how much water is on planet Earth? Since we do not have unlimited water, we need to be wise about how we use this precious resource.
+      </p>
+      <form id="water-use-vis-form">
+        <h4>Are you water-wise? Find out if you are a water hero!</h4>
+        <label for="teeth-dropdown">Do you run the tap whilst brushing your teeth?</label>
+        <select name="" id="teeth-dropdown">
+          <option selected disabled></option>
+          <option value="27">Yes</option>
+          <option value="4">No</option>
+        </select>
+
+        <label for="flush-dropdown">Does your toilet have a 1/2 flush?</label>
+        <select name="" id="flush-dropdown">
+          <option selected disabled></option>
+          <option value="30">Yes</option>
+          <option value="60">No</option>
+        </select>
+
+        <label for="bathe-dropdown">Do you mainly take a shower or take a bath?</label>
+        <select name="" id="bathe-dropdown">
+          <option selected disabled></option>
+          <option value="77">Shower</option>
+          <option value="92">Bath</option>
+          <option value="85">Both!</option>
+        </select>
+
+        <label for="diet-dropdown">Do you eat meat or are you a vegetarian/vegan?</label>
+        <select name="" id="diet-dropdown">
+          <option selected disabled></option>
+          <option value="4000">I eat meat</option>
+          <option value="2000">I am vegetarian</option>
+          <option value="1500">I am vegan</option>
+        </select>
+
+        <input type="submit" value="Submit your answers">
+      </form>
+
+      <div id="water-use-charts">
+        <p>Visible Water Use: This is the water we get from our kitchen and bathroom sinks for drinking, brushing our teeth, washing ourselves, and cleaning our house.</p>
+        <div id="water-use-vis-chart"></div>
+        <p>Invisible Water Use: This is the water we do not 'see', but we need it in order to grow the all food we eat and to make the items we use every day (including things like clothes, toys, and computers).</p>
+        <div id="water-use-invis-chart"></div>
+        <p>Which category uses the most water?</p>
+        <p>What things can you change in your daily routine to become a better water hero?</p>
       </div>
 
 
-
-      <div id="text-container">
-        <p>Here is some text about the water cycle</p>
-      </div>
-
-      <div id="image-container">
-        <img src="../images/WaterCycle05.jpg" usemap="#image-map"/>
-        <map name="image-map">
-          <area alt="" title="clouds" href="#" shape="rect" coords="126,69,390,206"/>
-          <area alt="" title="precipitation" href="#" shape="rect" coords="29,215,242,277" />
-          <area alt="" title="mountains" href="#" shape="rect" coords="116,302,449,384" />
-          <area alt="" title="forests" href="#" shape="rect" coords="41,451,192,590" />
-          <area alt="" title="rivers" href="#" shape="rect" coords="361,515,689,572" />
-          <area alt="" title="groundwater" href="#" shape="rect" coords="207,538,355,641" />
-          <area alt="" title="cities" href="#" shape="rect" coords="533,318,692,502" />
-          <area alt="" title="evaporation" href="#" shape="rect" coords="739,239,915,445" />
-          <area alt="" title="ocean" href="#" shape="rect" coords="730,496,935,635" />
-        </map>
-      </div>
-
-      <div id="water-use-content">
-        <p>
-          Why do we care about the water cycle? Do you know how much water is on planet Earth? Since we do not have unlimited water, we need to be wise about how we use this precious resource.
-        </p>
-        <form id="water-use-vis-form">
-          <h4>Are you water-wise? Find out if you are a water hero!</h4>
-          <label for="teeth-dropdown">Do you run the tap whilst brushing your teeth?</label>
-          <select name="" id="teeth-dropdown">
-            <option selected disabled></option>
-            <option value="27">Yes</option>
-            <option value="4">No</option>
-          </select>
-
-          <label for="flush-dropdown">Does your toilet have a 1/2 flush?</label>
-          <select name="" id="flush-dropdown">
-            <option selected disabled></option>
-            <option value="30">Yes</option>
-            <option value="60">No</option>
-          </select>
-
-          <label for="bathe-dropdown">Do you mainly take a shower or take a bath?</label>
-          <select name="" id="bathe-dropdown">
-            <option selected disabled></option>
-            <option value="77">Shower</option>
-            <option value="92">Bath</option>
-            <option value="85">Both!</option>
-          </select>
-
-          <label for="diet-dropdown">Do you eat meat or are you a vegetarian/vegan?</label>
-          <select name="" id="diet-dropdown">
-            <option selected disabled></option>
-            <option value="4000">I eat meat</option>
-            <option value="2000">I am vegetarian</option>
-            <option value="1500">I am vegan</option>
-          </select>
-
-          <input type="submit" value="Submit your answers">
-        </form>
-
-        <div id="water-use-charts">
-          <p>Visible Water Use: This is the water we get from our kitchen and bathroom sinks for drinking, brushing our teeth, washing ourselves, and cleaning our house.</p>
-          <div id="water-use-vis-chart"></div>
-          <p>Invisible Water Use: This is the water we do not 'see', but we need it in order to grow the all food we eat and to make the items we use every day (including things like clothes, toys, and computers).</p>
-          <div id="water-use-invis-chart"></div>
-          <p>Which category uses the most water?</p>
-          <p>What things can you change in your daily routine to become a better water hero?</p>
-        </div>
-
-
-
-      </div>
 
     </div>
 
-  </body>
-  </html>
+  </div>
+
+</body>
+</html>
