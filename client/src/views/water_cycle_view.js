@@ -7,7 +7,7 @@ const WaterCycleView = function (container) {
 WaterCycleView.prototype.bindEvents = function () {
   PubSub.subscribe('WaterData:all-cycle-elements-loaded', (event) => {
     // console.log('from view:', event.detail);
-    const WcElements = event.detail;
+    let WcElements = event.detail;
     // console.log(thing = WcElements);
 
     const oceanImg = document.querySelector('#Ocean');
@@ -20,7 +20,7 @@ WaterCycleView.prototype.bindEvents = function () {
     const gwImg = document.querySelector('#Groundwater');
     const citiesImg = document.querySelector('#Cities');
 
-    const selectorArray = [oceanImg, evaporationImg, cloudsImg, pptImg, mountainsImg, forestsImg, surfaceh2oImg, gwImg, citiesImg];
+    let selectorArray = [oceanImg, evaporationImg, cloudsImg, pptImg, mountainsImg, forestsImg, surfaceh2oImg, gwImg, citiesImg];
 //
 //
 // for(var i = 0;i < 10;i++) {
@@ -32,19 +32,19 @@ WaterCycleView.prototype.bindEvents = function () {
 //     }
 // }
 
-// for(let element of WcElements){
-//   try{throw element}
-//   catch(element_ii){
-//     for(let selector of selectorArray){
-//       try{throw selector}
-//       catch(selector_ii){
-//         selector_ii.addEventListener('click', (event) => {
-//           this.renderWaterInfo(element_ii);
-//         });
-//       }
-//     }
-//   }
-// }
+for(let element of WcElements){
+  try{throw element}
+  catch(element_ii){
+    for(let selector of selectorArray){
+      try{throw selector}
+      catch(selector_ii){
+        selector_ii.addEventListener('click', (event) => {
+          this.renderWaterInfo(element_ii);
+        });
+      }
+    }
+  }
+}
 
 
 // for(let element of WcElements){
@@ -55,15 +55,6 @@ WaterCycleView.prototype.bindEvents = function () {
 //   }
 // }
 
-
-WcElements.forEach((element) => {
-  selectorArray.forEach((selector) =>{
-    selector.addEventListener('click', (event) => {
-      this.renderWaterInfo(element);
-    })
-  })
-
-})
 
     // const oceanImg = document.querySelector('#Ocean');
     // oceanImg.addEventListener('click', (event) => {
