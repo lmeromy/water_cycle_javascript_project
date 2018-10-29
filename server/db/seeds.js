@@ -4,7 +4,7 @@ db.dropDatabase();
 db.water_cycle.insertMany([
   {
     name: "Ocean",
-    description: "Did you know that most of the earth's water is held in the oceans? More than 96% of all water on earth is ocean water!",
+    description: "Did you know that most of the earth's water is held in the oceans? More than 96% of all water on earth is ocean water!!",
     image: "./images/ocean.jpg"
   },
   {
