@@ -8,7 +8,7 @@ db.water_cycle.insertMany([
   },
   {
     name: "Evaporation",
-    description: "Energy from the sun heats up the water on earth. Some of the water evaporates into the air. Evaporation means that water changes from liquid into a gas (called water vapour). "
+    description: "Energy from the sun heats up the water on Earth. Some of the water evaporates into the air. Evaporation means that water changes from liquid form into a gas (called water vapour). "
   },
   {
     name: "Clouds",
@@ -32,11 +32,11 @@ db.water_cycle.insertMany([
   },
   {
     name: "Groundwater",
-    description: "Some water from the earth's surface ends up in the ground. This water flows down through the tiny spaces between bits of soil and rock, and sometimes stays under the ground for many centuries in pools called 'aquifers'. Other times, the groundwater continues to flow down and horizontally toward a river. It will eventually reach the river or even the ocean."
+    description: "Some water from the earth's surface ends up in the ground. This water flows from the surface down through the tiny spaces between bits of soil and rock, and sometimes stays underground for many centuries in pools called 'aquifers'. Other times, the groundwater slowly flows under the surface. It will eventually reach a river or even an ocean."
   },
   {
     name: "Cities",
-    description: "We use water! People use water for all kinds of things. We drink it, we shower or take baths, we wash clothes, we grown food, we use it to run factories, and we use it to make our toilets work! "
+    description: "We use water every day! People use water for all kinds of things; We drink it, we shower or take baths, we wash clothes, we grown food, we use it to run factories, and we use it to make our toilets work! "
   }
 ]);
 
@@ -45,12 +45,16 @@ db.water_use.insertMany([
     name: "avgUKUser",
     teeth: 15,
     flush: 45,
-    bathe: 85
+    bathe: 85,
+    meat: 4000,
+    veggie: 2000,
+    vegan: 1500
   },
   {
     name: "newUser",
     teeth:0,
     flush:0,
-    bathe:0
+    bathe:0,
+    diet: 0
   }
 ]);

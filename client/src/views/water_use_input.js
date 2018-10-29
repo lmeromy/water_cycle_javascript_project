@@ -16,7 +16,7 @@ WaterUseInputView.prototype.handleSubmit = function (evt) {
   const newWaterUser = this.createWaterUser(evt.target);
   PubSub.publish('WaterUseInputView:water-user-submit', newWaterUser);
   // console.log('water use input:', newWaterUser);
-  evt.target.reset;
+  evt.target.reset;  // the form is not re-setting...
 };
 
 
@@ -25,7 +25,8 @@ WaterUseInputView.prototype.createWaterUser = function (input) {
     name: "inputUser",
     teeth: Number(input[0].value), //ask about these values([0], [1], etc)
     flush: Number(input[1].value),
-    bathe: Number(input[2].value)
+    bathe: Number(input[2].value),
+    diet: Number(input[3].value)
   }
   return newWaterUser;
 

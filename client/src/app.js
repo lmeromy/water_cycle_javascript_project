@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const waterUseInputView = new WaterUseInputView(waterUseContainer);
     waterUseInputView.bindEvents();
 
-    const waterUseChartContainer = document.querySelector('#water-use-chart')
+    const waterUseChartContainer = document.querySelector('#water-use-charts')
     const waterUseChart = new WaterUseChart(waterUseChartContainer);
     waterUseChart.bindEvents();
 
