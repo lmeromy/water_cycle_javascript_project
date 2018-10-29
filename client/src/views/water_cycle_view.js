@@ -59,9 +59,16 @@ WaterCycleView.prototype.renderWaterInfo = function (element) {
   nameHeading.textContent = element.name;
   textRenderArea.appendChild(nameHeading);
 
+  const processImage = document.createElement('img');
+  processImage.src = element.image;
+  processImage.classList.add("individ-image")
+  textRenderArea.appendChild(processImage);
+
   const description = document.createElement('p');
   description.textContent = element.description;
   textRenderArea.appendChild(description);
+
+
 
 };
 
