@@ -74,7 +74,7 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
           bar: {groupWidth: "95%"},
           legend: { position: "none" },
         };
-        var chart = new google.visualization.ColumnChart(document.getElementById("water-use-vis-chart"));
+        const chart = new google.visualization.ColumnChart(document.getElementById("water-use-vis-chart"));
         chart.draw(view, options);
     }
 
@@ -85,7 +85,7 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
   google.charts.load("current", {packages:['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
+        const data = google.visualization.arrayToDataTable([
           ["Avg UK Meat Diet", "Avg UK Veggie Diet", { role: "style" } ],
           ["Avg UK Meat Diet", chartArray[0], "red"],
           ["Avg UK Veggie Diet", chartArray[1], "orange"],
@@ -94,7 +94,7 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
 
         ]);
 
-        var view = new google.visualization.DataView(data);
+        const view = new google.visualization.DataView(data);
         view.setColumns([0, 1,
                          // { calc: "stringify",
                          //   sourceColumn: 1,
@@ -102,7 +102,7 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
                          //   role: "annotation" },
                          2]);
 
-        var options = {
+        const options = {
           title: "Invisible Water Use: How does your invisible water use stack up?",
           width: 600,
           height: 400,
@@ -119,7 +119,7 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
           bar: {groupWidth: "95%"},
           legend: { position: "none" },
         };
-        var chart = new google.visualization.ColumnChart(document.getElementById("water-use-invis-chart"));
+        const chart = new google.visualization.ColumnChart(document.getElementById("water-use-invis-chart"));
         chart.draw(view, options);
     }
 
