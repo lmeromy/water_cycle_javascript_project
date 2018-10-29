@@ -4,8 +4,27 @@ img {
   /* align-content: center; */
 }
 
+header {
+  display: flex;
+  flex-flow: row;
+  background: #6DC0D5;
+  /* color: #E4D6A7; */
+  color: white;
+  padding: 10px;
+  align-items: center;
+}
+
+h1 {
+  width: 25%;
+}
+
+#intro {
+  width: 70%;
+}
+
 p {
   font-size: 12pt;
+  /* color: black; */
 }
 
 body {
@@ -39,6 +58,16 @@ body {
 }
 
 #why-care {
-  grid-area: why-care;
-  background: pink;
+  /* grid-area: why-care; */
+  background: #6DC0D5;
+  padding: 15px;
+  color: white;
+
+}
+
+#water-use-vis-form {
+  background: #EDA412;
+  padding: 15px;
+  /* color: white; */
+
 }
