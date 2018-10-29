@@ -32,21 +32,22 @@ WaterCycleView.prototype.bindEvents = function () {
 //     }
 // }
 
-for(let element of WcElements){
-  try{throw element}
-  catch(element_ii){
-    for(let selector of selectorArray){
-      try{throw selector}
-      catch(selector_ii){
-        selector_ii.addEventListener('click', (event) => {
-          this.renderWaterInfo(element_ii);
-        });
-      }
-    }
-  }
-}
+// for(let element of WcElements){
+//   try{throw element}
+//   catch(element_ii){
+//     for(let selector of selectorArray){
+//       try{throw selector}
+//       catch(selector_ii){
+//         selector_ii.addEventListener('click', (event) => {
+//           this.renderWaterInfo(element_ii);
+//         });
+//       }
+//     }
+//   }
+// }
 
-
+//
+// //Leah's loop
 // for(let element of WcElements){
 //   for(let selector of selectorArray){
 //     selector.addEventListener('click', (event) => {
@@ -54,6 +55,16 @@ for(let element of WcElements){
 //     });
 //   }
 // }
+
+//Colin's loop
+WcElements.forEach((element, index) => {
+  for(let selector of selectorArray){
+    selector.addEventListener('click', (event) => {
+      const process = WcElements[index]
+      this.renderWaterInfo(WcElements[index]);
+    });
+  }
+})
 
 
     // const oceanImg = document.querySelector('#Ocean');
