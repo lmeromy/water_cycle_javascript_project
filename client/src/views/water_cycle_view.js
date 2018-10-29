@@ -9,42 +9,98 @@ WaterCycleView.prototype.bindEvents = function () {
     // console.log('from view:', event.detail);
     const WcElements = event.detail;
     // console.log(thing = WcElements);
+
     const oceanImg = document.querySelector('#Ocean');
-    oceanImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[0]);
-    });
     const evaporationImg = document.querySelector('#Evaporation');
-    evaporationImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[1]);
-    });
     const cloudsImg = document.querySelector('#Clouds');
-    cloudsImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[2]);
-    });
     const pptImg = document.querySelector('#Precipitation');
-    pptImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[3]);
-    });
     const mountainsImg = document.querySelector('#Mountains');
-    mountainsImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[4]);
-    });
     const forestsImg = document.querySelector('#Forests');
-    forestsImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[5]);
-    });
     const surfaceh2oImg = document.querySelector('#Lakes-and-Rivers');
-    surfaceh2oImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[6]);
-    });
     const gwImg = document.querySelector('#Groundwater');
-    gwImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[7]);
-    });
     const citiesImg = document.querySelector('#Cities');
-    citiesImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[8]);
-    });
+
+    const selectorArray = [oceanImg, evaporationImg, cloudsImg, pptImg, mountainsImg, forestsImg, surfaceh2oImg, gwImg, citiesImg];
+//
+//
+// for(var i = 0;i < 10;i++) {
+//     try{throw i}
+//     catch(ii) {
+//         setTimeout(function(){
+//             console.log(ii);
+//         },1000);
+//     }
+// }
+
+// for(let element of WcElements){
+//   try{throw element}
+//   catch(element_ii){
+//     for(let selector of selectorArray){
+//       try{throw selector}
+//       catch(selector_ii){
+//         selector_ii.addEventListener('click', (event) => {
+//           this.renderWaterInfo(element_ii);
+//         });
+//       }
+//     }
+//   }
+// }
+
+
+// for(let element of WcElements){
+//   for(let selector of selectorArray){
+//     selector.addEventListener('click', (event) => {
+//       this.renderWaterInfo(element);
+//     });
+//   }
+// }
+
+
+WcElements.forEach((element) => {
+  selectorArray.forEach((selector) =>{
+    selector.addEventListener('click', (event) => {
+      this.renderWaterInfo(element);
+    })
+  })
+
+})
+
+    // const oceanImg = document.querySelector('#Ocean');
+    // oceanImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[0]);
+    // });
+    // const evaporationImg = document.querySelector('#Evaporation');
+    // evaporationImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[1]);
+    // });
+    // const cloudsImg = document.querySelector('#Clouds');
+    // cloudsImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[2]);
+    // });
+    // const pptImg = document.querySelector('#Precipitation');
+    // pptImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[3]);
+    // });
+    // const mountainsImg = document.querySelector('#Mountains');
+    // mountainsImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[4]);
+    // });
+    // const forestsImg = document.querySelector('#Forests');
+    // forestsImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[5]);
+    // });
+    // const surfaceh2oImg = document.querySelector('#Lakes-and-Rivers');
+    // surfaceh2oImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[6]);
+    // });
+    // const gwImg = document.querySelector('#Groundwater');
+    // gwImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[7]);
+    // });
+    // const citiesImg = document.querySelector('#Cities');
+    // citiesImg.addEventListener('click', (event) => {
+    //   this.renderWaterInfo(WcElements[8]);
+    // });
 
   });
 };
