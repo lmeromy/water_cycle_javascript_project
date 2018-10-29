@@ -1,13 +1,9 @@
 img {
-  max-width: 400px;
+  width: 80%;
   height: auto;
 }
 
-#image-container {
-  max-width: 500px;
-  height: auto;
 
-}
 
 body {
   background: white;
