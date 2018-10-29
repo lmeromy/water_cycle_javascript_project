@@ -50,12 +50,7 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
         ]);
 
         const view = new google.visualization.DataView(data);
-        view.setColumns([0, 1,
-                         // { calc: "stringify",
-                         //   sourceColumn: 1,
-                         //   type: "string",
-                         //   role: "annotation" },
-                         2]);
+        view.setColumns([0, 1, 2]);
 
         const options = {
           title: "Compare your daily visible water use",
@@ -101,7 +96,6 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
                          //   type: "string",
                          //   role: "annotation" },
                          2]);
-
         const options = {
           title: "Invisible Water Use: How does your invisible water use stack up?",
           width: 600,
