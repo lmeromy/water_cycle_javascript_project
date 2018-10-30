@@ -8,21 +8,6 @@ const WaterData = function (url){
 
 WaterData.prototype.bindEvents = function () {
 
-  // PubSub.subscribe('WaterData:all-use-elements-loaded', (event) => {
-  //   const allUsers = event.detail;
-  //   // console.log('water data:', event.detail);
-  //   // let test = null;
-  //   for(let user of allUsers){
-  //     if(user.name === 'newUser')
-  //     // test = user._id;
-  //     this.putUserInput(user);
-  //   }
-  //
-  //   console.log(test);
-  //
-  //   // const user = allUsers.name['newUser']
-  // });
-
   PubSub.subscribe('WaterUseInputView:water-user-submit', (event) => {
     this.postUserInput(event.detail);
 
@@ -58,7 +43,7 @@ WaterData.prototype.getData_quiz = function () {
   request.get()
   .then((quiz_qs) => {
     PubSub.publish('WaterData:quiz-loaded', quiz_qs);
-    console.log(quiz_qs);
+    // console.log(quiz_qs);
   })
   .catch(console.error);
 };

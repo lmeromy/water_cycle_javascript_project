@@ -1,5 +1,5 @@
 const assert = require('assert');
-const waterChartData = require('../views/water_use_chart.js');
+const waterUseChart = require('../views/water_use_chart.js');
 
 describe('waterUseChart', function() {
   let data;

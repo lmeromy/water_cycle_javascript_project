@@ -44,7 +44,7 @@ db.water_cycle.insertMany([
   },
   {
     name: "Cities",
-    description: "We use water every day! People use water for all kinds of things; We drink it, we shower or take baths, we wash clothes, we grown food, we use it to run factories, and we use it to make our toilets work! ",
+    description: "We use water every day! People use water for all kinds of things; We drink it, we shower or take baths, we wash clothes, we grow food, we use it to run factories, and we use it to make our toilets work! ",
     image: "./images/Cities.jpg"
   }
 ]);
@@ -84,7 +84,7 @@ db.quiz.insertMany([
   {
     question: 3,
     q_text: "Where does water go after it falls to Earth?",
-    answers: ["Into rivers", "Into the ground", "Into plants", "All of the above!"],
+    answers: ["Into rivers", "It flows into the ground", "Plants drink it", "All of the above!"],
     correct: "All of the above!"
   }
 

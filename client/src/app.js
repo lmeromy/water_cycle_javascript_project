@@ -2,7 +2,7 @@ const WaterData = require('./models/water_data.js');
 const WaterCycleView = require('./views/water_cycle_view.js');
 const WaterUseInputView = require('./views/water_use_input.js');
 const WaterUseChart = require('./views/water_use_chart.js');
-
+const QuizView = require('./views/quiz_view.js');
 const ImageMap = require('./helpers/image_map');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,9 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const waterUseInputView = new WaterUseInputView(waterUseContainer);
     waterUseInputView.bindEvents();
 
-    const waterUseChartContainer = document.querySelector('#water-use-charts')
+    const waterUseChartContainer = document.querySelector('#water-use-charts');
     const waterUseChart = new WaterUseChart(waterUseChartContainer);
     waterUseChart.bindEvents();
+
+    const waterQuizContainer = document.querySelector('#quiz');
+    const waterQuizInstance = new QuizView(waterQuizContainer);
+    waterQuizInstance.bindEvents();
 
     const waterCycleUrl = 'http://localhost:3000/api/water-cycle';
     const waterCycle = new WaterData(waterCycleUrl);
