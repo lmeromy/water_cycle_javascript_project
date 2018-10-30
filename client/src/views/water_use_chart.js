@@ -74,7 +74,7 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
 
     //     $(window).resize(function(){
     //       drawChart();
-    // }
+    }
 
 };
 
