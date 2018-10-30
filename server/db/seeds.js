@@ -70,22 +70,32 @@ db.water_use.insertMany([
 
 db.quiz.insertMany([
   {
-    question: 1,
-    q_text: "What is word for water that falls from clouds in the atmosphere?",
-    answers: ["H2O", "Precipitation", "Manna from heaven"],
-    correct: "Precipitation"
+    question: "What is word for water that falls from clouds in the atmosphere?",
+    answers: {
+      a: "H2O",
+      b: "Precipitation",
+      c: "Manna from heaven"
+    },
+    correctAnswer: "b"
   },
   {
-    question: 2,
-    q_text: "How does water get from the ocean to the atomsphere?",
-    answers: ["Evaporation", "Mutation", "Vacation"],
-    correct: "Evaporation"
+    question: "How does water get from the ocean to the atomsphere?",
+    answers: {
+      a: "Evaporation",
+      b: "Mutation",
+      c: "Vacation"
+    },
+    correctAnswer: "a"
   },
   {
-    question: 3,
-    q_text: "Where does water go after it falls to Earth?",
-    answers: ["Into rivers", "It flows into the ground", "Plants drink it", "All of the above!"],
-    correct: "All of the above!"
+    question: "Where does water go after it falls to Earth?",
+    answers: {
+      a: "Into rivers",
+      b: "It flows into the ground",
+      c: "Plants drink it",
+      d: "All of the above!"
+    },
+    correctAnswer: "d"
   }
 
 ]);

@@ -9,9 +9,12 @@ QuizView.prototype.bindEvents = function () {
   PubSub.subscribe('WaterData:quiz-loaded', (event) => {
     // console.log('from quiz view', event.detail);
     // console.log('this', this);
+
+    // create quiz elements to manipulate
     const quizContainer = document.querySelector('#quiz');
     const resultsContainer = document.querySelector('#results');
     const submitButton = document.querySelector('#submit');
+
     this.buildQuiz(event.detail, quizContainer, resultsContainer, submitButton)
   })
 };
@@ -19,122 +22,88 @@ QuizView.prototype.bindEvents = function () {
 
 QuizView.prototype.buildQuiz = function (questions, quizContainer, resultsContainer, submitButton) {
 
-  function showQuestions(questions, quizContainer){
-    // code will go here
-    // we'll need a place to store the output and the answer choices
-    let output = [];
+  function renderQuestions(questions, quizContainer){
+    // need a place to store the output and the answer choices
+    let displayQuestions = [];
     let answers;
 
     // for each question...
-    for(var i=0; i<questions.length; i++){
+    for(let i=0; i<questions.length; i++){
 
       // first reset the list of answers
       answers = [];
 
       // for each available answer to this question...
-      for(item in questions[i].answers){
+      for(let letter in questions[i].answers){
 
-        // ...add an html radio button
+        // add html radio button
         answers.push(
           '<label>'
-          + '<input type="radio" name="question'+i+'" value="'+item+'">'
-          + item + ': '
-          + questions[i].answers[item]
+          + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+          + letter + ': '
+          + questions[i].answers[letter]
           + '</label>'
         );
       }
 
-      // add this question and its answers to the output
-      output.push(
-        '<div class="question">' + questions[i].q_text + '</div>'
+      // add this question and its answers to the displayQuestions
+      //note: .join is a js method which takes all the elements of an array and joins them into one string. In our case this will give us a big string of html which will render stuff in the DOM. Delimiter is passed in as an arguemnt. Default is a comma, but here we specify ''.
+      displayQuestions.push(
+        '<div class="question">' + questions[i].question + '</div>'
         + '<div class="answers">' + answers.join('') + '</div>'
       );
     }
 
     // finally combine our output list into one string of html and put it on the page
-    quizContainer.innerHTML = output.join('');
+    quizContainer.innerHTML = displayQuestions.join('');  // see above for info on .join method
   }
 
-
   function showResults(questions, quizContainer, resultsContainer){
-    // code will go here
+
     // gather answer containers from our quiz
-    var answerContainers = quizContainer.querySelectorAll('.answers');
+    const answerContainers = quizContainer.querySelectorAll('.answers');
 
     // keep track of user's answers
-    var userAnswer = '';
-    var numCorrect = 0;
+    let userAnswer = '';
+    let numCorrect = 0;
 
     // for each question...
-    for(var i=0; i<questions.length; i++){
+    for(let i=0; i<questions.length; i++){
 
       // find selected answer
       userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
 
       // if answer is correct
-      if(userAnswer===questions[i].correctAnswer){
-        // add to the number of correct answers
+      if(userAnswer === questions[i].correctAnswer){
+        // add to the number of correct answers & color the answers blue
         numCorrect++;
-
-        // color the answers green
-        answerContainers[i].style.color = 'lightgreen';
+        answerContainers[i].style.color = 'blue';
       }
-      // if answer is wrong or blank
+      // if answer is wrong or blank, color the answers red
       else{
-        // color the answers red
         answerContainers[i].style.color = 'red';
       }
     }
 
     // show number of correct answers out of total
-    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+    resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length + ' questions correct. Good try!';
   }
 
 
-  // show the questions
-  showQuestions(questions, quizContainer);
+  // render the questions
+  renderQuestions(questions, quizContainer);
 
-  // when user clicks submit, show results
-  submitButton.onclick = function(){
-    showResults(questions, quizContainer, resultsContainer);
-  }
+
+  // show results when submitted
+  submitButton.addEventListener('click', () => {
+    showResults(questions, quizContainer, resultsContainer)
+  });
+
+  //onclick is another sort of event listener function...this works too:
+  // submitButton.onclick = function(){
+  //   showResults(questions, quizContainer, resultsContainer);
+  // }
 
 };
-
-// QuizView.prototype.buildQuiz = function (quiz) {
-//
-//   const questions = [];
-//   quiz.forEach((currentQ, Qnumber) => {
-//     const multiChoice = [];
-//     // and for each available answer...
-//     for(let item of currentQ.answers){
-//
-//       // ...add an HTML radio button
-//       multiChoice.push(
-//         `<label>
-//           <input type="radio" name="question${Qnumber}" value="${item}">
-//           ${item} :
-//           ${currentQ.answers[item]}
-//         </label>`
-//       );
-//     }
-//     // add this question and its answers to the output
-//  questions.push(
-//    `<div class="question"> ${currentQ.q_text} </div>
-//    <div class="answers"> ${multiChoice.join('')} </div>`
-//  );
-//
-//     // let question = document.createElement('.question');
-//     // question.textContent = currentQ.q_text;
-//     // questions.push(question);
-//     // return questions
-//   })
-//
-//  // finally combine our output list into one string of HTML and put it on the page
-//   // const quiz1 = document.querySelector('#quiz')
-//   this.container.appendChild(questions);
-//
-// };
-
 
 module.exports = QuizView;
