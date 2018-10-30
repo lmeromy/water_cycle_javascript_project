@@ -45,7 +45,6 @@ body {
   grid-template-areas:
   "image-container text-container";
   padding: 20px;
-
 }
 
 #image-container {
@@ -69,5 +68,21 @@ body {
   background: #EDA412;
   padding: 15px;
   /* color: white; */
+}
 
+#water-use-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "water-use-vis-chart water-use-invis-chart";
+  padding: 20px;
+}
+
+#water-use-vis-chart {
+  grid-area: water-use-vis-chart;
+}
+
+#water-use-invis-chart {
+  grid-area: water-use-invis-chart;
 }
