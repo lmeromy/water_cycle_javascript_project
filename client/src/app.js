@@ -30,4 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // waterUse.getData_h2o_use();
     waterUse.bindEvents();
 
+    const waterQuizUrl = 'http://localhost:3000/api/water-quiz';
+    const waterQuiz = new WaterData(waterQuizUrl);
+    waterQuiz.getData_quiz();
+    // waterUse.bindEvents();
+
 });

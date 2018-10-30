@@ -52,6 +52,17 @@ WaterData.prototype.postUserInput = function (input) {
   .catch(console.error);
 };
 
+// get quiz from api
+WaterData.prototype.getData_quiz = function () {
+  const request = new Request(this.url);
+  request.get()
+  .then((quiz_qs) => {
+    PubSub.publish('WaterData:quiz-loaded', quiz_qs);
+    console.log(quiz_qs);
+  })
+  .catch(console.error);
+};
+
 // // UPDATING USER INPUT TO THE DATABASE
 // WaterData.prototype.putUserInput = function (input) {
 //   const id = input._id;

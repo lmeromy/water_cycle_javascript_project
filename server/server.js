@@ -19,6 +19,9 @@ MongoClient.connect('mongodb://localhost:27017')
     const waterUseCollection = db.collection('water_use');
     const waterUseRouter = createRouter(waterUseCollection);
     app.use('/api/water-use', waterUseRouter);
+    const waterQuizCollection = db.collection('quiz');
+    const waterQuizRouter = createRouter(waterQuizCollection);
+    app.use('/api/water-quiz', waterQuizRouter);
   })
   .catch(console.err);
 
