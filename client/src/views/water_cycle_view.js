@@ -7,44 +7,27 @@ const WaterCycleView = function (container) {
 WaterCycleView.prototype.bindEvents = function () {
   PubSub.subscribe('WaterData:all-cycle-elements-loaded', (event) => {
     // console.log('from view:', event.detail);
-    const WcElements = event.detail;
+    let WcElements = event.detail;
     // console.log(thing = WcElements);
+
     const oceanImg = document.querySelector('#Ocean');
-    oceanImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[0]);
-    });
     const evaporationImg = document.querySelector('#Evaporation');
-    evaporationImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[1]);
-    });
     const cloudsImg = document.querySelector('#Clouds');
-    cloudsImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[2]);
-    });
     const pptImg = document.querySelector('#Precipitation');
-    pptImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[3]);
-    });
     const mountainsImg = document.querySelector('#Mountains');
-    mountainsImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[4]);
-    });
     const forestsImg = document.querySelector('#Forests');
-    forestsImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[5]);
-    });
     const surfaceh2oImg = document.querySelector('#Lakes-and-Rivers');
-    surfaceh2oImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[6]);
-    });
     const gwImg = document.querySelector('#Groundwater');
-    gwImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[7]);
-    });
     const citiesImg = document.querySelector('#Cities');
-    citiesImg.addEventListener('click', (event) => {
-      this.renderWaterInfo(WcElements[8]);
-    });
+
+    let selectorArray = [oceanImg, evaporationImg, cloudsImg, pptImg, mountainsImg, forestsImg, surfaceh2oImg, gwImg, citiesImg];
+
+
+    WcElements.forEach((element, index) => {
+      selectorArray[index].addEventListener('click', (event) => {
+        this.renderWaterInfo(element);
+      });
+    })
 
   });
 };
