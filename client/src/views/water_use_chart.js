@@ -71,7 +71,10 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
         };
         const chart = new google.visualization.ColumnChart(document.getElementById("water-use-vis-chart"));
         chart.draw(view, options);
-    }
+
+    //     $(window).resize(function(){
+    //       drawChart();
+    // }
 
 };
 
