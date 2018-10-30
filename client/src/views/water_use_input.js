@@ -8,6 +8,7 @@ WaterUseInputView.prototype.bindEvents = function () {
    this.form.addEventListener('submit', (event) => {
      // console.log('from input view:', event);
      this.handleSubmit(event);
+     this.form.reset();
    });
 };
 
@@ -16,7 +17,6 @@ WaterUseInputView.prototype.handleSubmit = function (evt) {
   const newWaterUser = this.createWaterUser(evt.target);
   PubSub.publish('WaterUseInputView:water-user-submit', newWaterUser);
   // console.log('water use input:', newWaterUser);
-  evt.target.reset;  // the form is not re-setting...
 };
 
 
