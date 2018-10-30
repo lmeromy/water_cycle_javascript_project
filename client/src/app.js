@@ -3,9 +3,11 @@ const WaterCycleView = require('./views/water_cycle_view.js');
 const WaterUseInputView = require('./views/water_use_input.js');
 const WaterUseChart = require('./views/water_use_chart.js');
 
+const ImageMap = require('./helpers/image_map');
 
 document.addEventListener('DOMContentLoaded', () => {
     // console.log('Javascript Loaded');
+    ImageMap('img[usemap]');
 
     const waterCycleContainer = document.querySelector('#water-cycle-container');
     const waterCycleView = new WaterCycleView(waterCycleContainer);

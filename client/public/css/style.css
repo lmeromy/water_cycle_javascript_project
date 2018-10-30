@@ -1,14 +1,44 @@
 img {
-  max-width: 400px;
+  width: 90%;
   height: auto;
+  /* align-content: center; */
 }
 
-#image-container {
-  max-width: 500px;
-  height: auto;
-
+p {
+  font-size: 12pt;
 }
 
 body {
   background: white;
+  font-family: Helvetica, sans-serif;
+}
+
+
+.individ-image {
+  width: 90%;
+  height: auto;
+}
+
+#water-cycle-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "image-container text-container";
+  padding: 20px;
+
+}
+
+#image-container {
+  grid-area: image-container;
+}
+
+#text-container {
+  grid-area: text-container;
+  align-self: center;
+}
+
+#why-care {
+  grid-area: why-care;
+  background: pink;
 }

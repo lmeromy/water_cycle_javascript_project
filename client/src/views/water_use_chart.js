@@ -53,7 +53,7 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
         view.setColumns([0, 1, 2]);
 
         const options = {
-          title: "Compare your daily visible water use",
+          title: "Visible Water Use: This is the water we get from our kitchen and bathroom sinks for drinking, brushing our teeth, washing ourselves, and cleaning our house.",
           width: 600,
           height: 400,
           vAxis: {
@@ -97,7 +97,7 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
                          //   role: "annotation" },
                          2]);
         const options = {
-          title: "Invisible Water Use: How does your invisible water use stack up?",
+          title: "Invisible Water Use: This is the water we do not 'see', but we need it in order to grow the all food we eat and to make the items we use every day (including things like clothes, toys, and computers).",
           width: 600,
           height: 400,
           vAxis: {

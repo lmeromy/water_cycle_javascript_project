@@ -7,45 +7,49 @@
   <title>The Water Cycle</title>
   <script src="/js/bundle.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-<div id="water-cycle-container">
-  <div id="buttons">
-    <input type="button" value="Ocean" id="Ocean">
-    <input type="button" value="Evaporation" id="Evaporation">
-    <input type="button" value="Clouds" id="Clouds">
-    <input type="button" value="Precipitation" id="Precipitation">
-    <input type="button" value="Mountains" id="Mountains">
-    <input type="button" value="Forests" id="Forests">
-    <input type="button" value="Lakes and Rivers" id="Lakes-and-Rivers">
-    <input type="button" value="Groundwater" id="Groundwater">
-    <input type="button" value="Cities" id="Cities">
+  <header>
+    <h2>The Water Cycle</h2>
+    <div>
+      <p>What is the water cycle? It is the path water takes through our world as it moves from one place to another. Water is special because it exists in 3 different states: solid (snow and ice), liquid (like the water you drink), and gas (the air is full of tiny water molecules called water vapour). </p>
+    </div>
+  </header>
+
+  <div id="water-cycle-container">
+
+    <div id="image-container">
+      <img src="../images/WaterCycle05.jpg" usemap="#image-map"/>
+      <map name="image-map">
+        <area id="Clouds" shape="rect" coords="75,39,186,107" />
+        <area id="Precipitation" shape="rect" coords="16,109,125,142" />
+        <area id="Mountains" shape="rect" coords="66,156,216,196" />
+        <area id="Forests" shape="rect" coords="22,228,99,293" />
+        <area id="Lakes-and-Rivers" href="#" shape="rect" coords="196,262,341,284" />
+        <area id="Groundwater" shape="rect" coords="110,280,214,322" />
+        <area id="Cities" shape="rect" coords="269,158,344,253" />
+        <area id="Evaporation" shape="rect" coords="373,118,472,246" />
+        <area id="Ocean" shape="rect" coords="363,255,475,321" />
+      </map>
+    </div>
+
+    <div id="text-container">Click on the different elements of the Water Cycle to find out more!</div>
+
   </div>
 
-
-  <div id="text-container">
-      <p>Here is some text about the water cycle</p>
+  <div id="why-care">
+    <p>
+    Why do we care about the water cycle? Do you know how much water is on planet Earth? Since we do not have unlimited water, we need to be wise about how we use this precious resource.</p>
   </div>
 
-  <div id="image-container">
-      <img src="../images/WaterCycleImageDraft.jpg" usemap="#WaterCycleMap" />
-    <map name="WaterCycleMap">
-      <area target="" alt="ocean" title="ocean" href="" coords="479,22,697,141" shape="rect">
-      <area target="" alt="evaporation" title="evaporation" href="" coords="774,91,1045,227" shape="rect">
-      <area target="" alt="clouds" title="clouds" href="" coords="847,269,1069,429" shape="rect">
-      <area target="" alt="precipitation" title="precipitation" href="" coords="796,463,1050,633" shape="rect">
-      <area target="" alt="mountains" title="mountains" href="" coords="574,566,784,764" shape="rect">
-      <area target="" alt="forests" title="forests" href="" coords="327,526,528,783" shape="rect">
-      <area target="" alt="rivers" title="rivers" href="" coords="46,421,303,594" shape="rect">
-      <area target="" alt="evaporation" title="evaporation" href="" coords="16,243,275,396" shape="rect">
-      <area target="" alt="cities" title="cities" href="" coords="163,29,436,231" shape="rect">
-    </map>
-  </div>
 
   <div id="water-use-content">
+
     <form id="water-use-vis-form">
+      <h4>Are you water-wise? Find out if you are a water hero!</h4>
       <label for="teeth-dropdown">Do you run the tap whilst brushing your teeth?</label>
       <select name="" id="teeth-dropdown">
         <option selected disabled></option>
@@ -82,13 +86,16 @@
     <div id="water-use-charts">
       <div id="water-use-vis-chart"></div>
       <div id="water-use-invis-chart"></div>
+      <div>
+        <p>Which category uses the most water?</p>
+        <p>What things can you change in your daily routine to become a better water hero?</p>
+      </div>
     </div>
 
 
 
   </div>
 
-</div>
 
 </body>
 </html>
