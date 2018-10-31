@@ -40,7 +40,6 @@ WaterUseChart.prototype.prepareInvisWaterUse = function (data) {
 };
 
 
-
 WaterUseChart.prototype.renderVis = function (chartArray) {
 
   google.charts.load("current", {packages:['corechart']});
@@ -69,6 +68,9 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
               count: 6
             }
           },
+          backgroundColor: {
+       fill: '#FFBA08'
+     },
           bar: {groupWidth: "95%"},
           legend: { position: "none" },
         };
@@ -122,7 +124,10 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
 };
 
 WaterUseChart.prototype.renderChartText = function () {
+
   const textRenderArea = document.querySelector('#chart-text');
+
+  textRenderArea.innerHTML = '';
 
   const chartText = document.createElement('p');
   chartText.textContent = "Which category uses the most water? What things can you change in your daily routine to become a better water hero?";

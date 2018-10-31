@@ -7,8 +7,7 @@ img {
 header {
   display: flex;
   flex-flow: row;
-  background: #6DC0D5;
-  /* color: #E4D6A7; */
+  background: #2F6690;
   color: white;
   padding: 10px;
   align-items: center;
@@ -16,10 +15,17 @@ header {
 
 h1 {
   width: 25%;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40pt;
+}
+h4 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 26pt;
 }
 
 #intro {
-  width: 70%;
+  width: 75%;
 }
 
 p {
@@ -58,26 +64,21 @@ body {
 
 #why-care {
   /* grid-area: why-care; */
-  background: #6DC0D5;
-  padding: 15px;
+  background: #0075C4;
+  padding: 5px;
   color: white;
-
-}
-
-#water-use-vis-form {
-  background: #EDA412;
-  padding: 15px;
-  display: grid;
-  
+  text-align: center;
 }
 
 #water-use-charts {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-  "water-use-vis-chart water-use-invis-chart";
-  padding: 20px;
+    "water-use-vis-chart water-use-invis-chart"
+    "chart-text chart-text";
+  padding: 15px;
+  height: min-content;
 }
 
 #water-use-vis-chart {
@@ -88,8 +89,24 @@ body {
   grid-area: water-use-invis-chart;
 }
 
+#chart-text {
+  grid-area: chart-text;
+  padding: 5px;
+}
+
+#water-use-content {
+  background: #EDA412;
+}
+
+/* WATER USE FORM */
+#water-use-vis-form {
+  width: 70%;
+  background-color: #EFA00B;
+  padding: 15px;
+}
+
 input {
-    background-color: #F7CB15;
+    background-color: #D65108;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -97,4 +114,35 @@ input {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+select {
+  width: 20%;
+  border: none;
+}
+
+label{
+  width: 60%;
+}
+
+#form-container{
+  display: flex;
+  justify-content: center;
+}
+
+.select-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10pt;
+}
+
+#button-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20pt;
+}
+
+h4{
+  text-align: center;
 }
