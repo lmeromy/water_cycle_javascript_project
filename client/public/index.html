@@ -7,8 +7,8 @@
   <title>The Water Cycle</title>
   <script src="/js/bundle.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
   <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
 <body>
 
@@ -20,100 +20,101 @@
   </header>
 
   <div id="water-cycle-container">
-
     <div id="image-container">
-      <img src="../images/WaterCycle05.jpg" usemap="#image-map"/>
+      <img src="../images/WaterCycleBrighter2.jpg" usemap="#image-map"/>
       <map name="image-map">
-        <area id="Clouds" shape="rect" coords="75,39,186,107" />
-        <area id="Precipitation" shape="rect" coords="16,109,125,142" />
-        <area id="Mountains" shape="rect" coords="66,156,216,196" />
-        <area id="Forests" shape="rect" coords="22,228,99,293" />
-        <area id="Lakes-and-Rivers" href="#" shape="rect" coords="196,262,341,284" />
-        <area id="Groundwater" shape="rect" coords="110,280,214,322" />
-        <area id="Cities" shape="rect" coords="269,158,344,253" />
-        <area id="Evaporation" shape="rect" coords="373,118,472,246" />
-        <area id="Ocean" shape="rect" coords="363,255,475,321" />
-      </map>
-    </div>
 
-    <div id="text-container">Click on the different elements of the Water Cycle to find out more!</div>
-
-  </div>
-  
-  <div id="quiz-container">
-    <div id="quiz"></div>
-    <button id="submit">Submit Quiz</button>
-    <div id="results"></div>
-
-  </div>
-
-
-  <div id="why-care">
-    <p>
-    Why do we care about the water cycle? Do you know how much water is on planet Earth? Since we do not have unlimited water, we need to be wise about how we use this precious resource.</p>
-  </div>
-
-  <div id="water-use-content">
-
-    <form id="water-use-vis-form">
-      <h4>Are you water-wise? Find out if you are a water hero!</h4>
-
-    <div id="teeth-dropdown-div"
-      <label for="teeth-dropdown">Do you run the tap whilst brushing your teeth?</label>
-      <select name="" id="teeth-dropdown">
-        <option selected disabled></option>
-        <option value="27">Yes</option>
-        <option value="4">No</option>
-      </select>
-    </div>
-
-    <div id="flush-dropdown-div"
-      <label for="flush-dropdown">Does your toilet have a 1/2 flush?</label>
-      <select name="" id="flush-dropdown">
-        <option selected disabled></option>
-        <option value="30">Yes</option>
-        <option value="60">No</option>
-      </select>
-    </div>
-
-    <div id="bathe-dropdown-div">
-      <label for="bathe-dropdown">Do you mainly take a shower or take a bath?</label>
-      <select name="" id="bathe-dropdown">
-        <option selected disabled></option>
-        <option value="77">Shower</option>
-        <option value="92">Bath</option>
-        <option value="85">Both!</option>
-      </select>
-  <div>
-
-    <div id="diet-dropdown-div>"
-      <label for="diet-dropdown">Do you eat meat or are you a vegetarian/vegan?</label>
-      <select name="" id="diet-dropdown">
-        <option selected disabled></option>
-        <option value="4000">I eat meat</option>
-        <option value="2000">I am vegetarian</option>
-        <option value="1500">I am vegan</option>
-      </select>
-    </div>
-
-    <div id="submit-div">
-      <input type="submit" value="Submit your answers">
-    </div>
-    </form>
-
-    <div id="water-use-charts">
-      <div id="water-use-vis-chart"></div>
-      <div id="water-use-invis-chart"></div>
-      <div>
-        <p>Which category uses the most water?</p>
-        <p>What things can you change in your daily routine to become a better water hero?</p>
+        <area id="Clouds" href="#" shape="rect" coords="107,11,372,141" />
+        <area id="Precipitation" href="#" shape="rect" coords="30,149,213,218" />
+        <area id="Mountains" href="#" shape="rect" coords="47,225,390,295" />
+        <area id="Forests" href="#" shape="rect" coords="45,358,164,481" />
+        <area id="Lakes-and-Rivers" href="#" shape="rect" coords="305,390,604,445" />
+        <area id="Groundwater" href="#" shape="rect" coords="176,445,488,501" />
+        <area id="Cities" href="#" shape="rect" coords="440,233,594,374" />
+        <area id="Evaporation" href="#" shape="rect" coords="645,168,775,344" />
+        <area id="Ocean" href="#" shape="rect" coords="615,357,789,485" />
       </div>
+
+      <div id="text-container">
+        <p>Click on the different elements of the Water Cycle to find out more!</p>
+      </div>
+
+    </div>
+
+    <div id="quiz-container">
+      <div id="quiz"></div>
+      <button id="submit">Submit Quiz</button>
+      <div id="results"></div>
+
     </div>
 
 
+    <div id="why-care">
 
-  </div>
+      <h4>Why do we care about the water cycle?</h4>
+      <p>Do you know how much water is on planet Earth? Since we do not have unlimited water, we need to be wise about how we use this precious resource.</p>
+    </div>
 
 
-</body>
-</html>
+    <div id="water-use-content">
+
+      <div id="form-container">
+        <form id="water-use-vis-form">
+          <h4>Are you water-wise? Find out if you are a water hero!</h4>
+
+
+          <div class="select-container">
+            <label for="teeth-dropdown">Do you run the tap whilst brushing your teeth?</label>
+            <select name="" id="teeth-dropdown">
+              <option selected disabled></option>
+              <option value="27">Yes</option>
+              <option value="4">No</option>
+            </select>
+          </div>
+
+          <div class="select-container">
+            <label for="flush-dropdown">Does your toilet have a 1/2 flush?</label>
+            <select name="" id="flush-dropdown">
+              <option selected disabled></option>
+              <option value="30">Yes</option>
+              <option value="60">No</option>
+            </select>
+          </div>
+
+          <div class="select-container">
+            <label for="bathe-dropdown">Do you mainly take a shower or take a bath?</label>
+            <select name="" id="bathe-dropdown">
+              <option selected disabled></option>
+              <option value="77">Shower</option>
+              <option value="92">Bath</option>
+              <option value="85">Both!</option>
+            </select>
+          </div>
+
+
+          <div class="select-container">
+            <label for="diet-dropdown">Do you eat meat or are you a vegetarian/vegan?</label>
+            <select id="diet-dropdown">
+              <option selected disabled></option>
+              <option value="4000">I eat meat</option>
+              <option value="2000">I am vegetarian</option>
+              <option value="1500">I am vegan</option>
+            </select>
+          </div>
+
+
+          <div id="button-container">
+            <input type="submit" value="Submit your answers">
+          </div>
+        </form>
+      </div>
+      <div id="water-use-charts">
+        <div id="water-use-vis-chart"></div>
+        <div id="water-use-invis-chart"></div>
+        <div id="chart-text"></div>
+      </div>
+
+    </div>
+
+  </body>
+  </html>

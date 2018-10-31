@@ -12,6 +12,9 @@ WaterUseChart.prototype.bindEvents = function () {
 
     const chartArray2 = this.prepareInvisWaterUse(event.detail);
     this.renderInvis(chartArray2)
+
+    this.renderChartText();
+
   })
 
 };
@@ -35,7 +38,6 @@ WaterUseChart.prototype.prepareInvisWaterUse = function (data) {
   const chartArray = [avgMeat, avgVeggie, avgVegan, newUserDiet];
   return chartArray;
 };
-
 
 
 WaterUseChart.prototype.renderVis = function (chartArray) {
@@ -66,6 +68,9 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
               count: 6
             }
           },
+          backgroundColor: {
+       fill: '#FFBA08'
+     },
           bar: {groupWidth: "95%"},
           legend: { position: "none" },
         };
@@ -116,6 +121,17 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
         chart.draw(view, options);
     }
 
+};
+
+WaterUseChart.prototype.renderChartText = function () {
+
+  const textRenderArea = document.querySelector('#chart-text');
+
+  textRenderArea.innerHTML = '';
+
+  const chartText = document.createElement('p');
+  chartText.textContent = "Which category uses the most water? What things can you change in your daily routine to become a better water hero?";
+  textRenderArea.appendChild(chartText);
 };
 
 module.exports = WaterUseChart;
