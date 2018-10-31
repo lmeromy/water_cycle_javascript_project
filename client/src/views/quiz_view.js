@@ -19,7 +19,8 @@ QuizView.prototype.bindEvents = function () {
   })
 };
 
-
+// note: I adapted the lesson from here: https://simplestepscode.com/javascript-quiz-tutorial/ to build this code.
+// maybe try to just stick the quiz elements on the html page and work in the code to get the answer and display score...?
 QuizView.prototype.buildQuiz = function (questions, quizContainer, resultsContainer, submitButton) {
 
   function renderQuestions(questions, quizContainer){
@@ -98,11 +99,6 @@ QuizView.prototype.buildQuiz = function (questions, quizContainer, resultsContai
   submitButton.addEventListener('click', () => {
     showResults(questions, quizContainer, resultsContainer)
   });
-
-  //onclick is another sort of event listener function...this works too:
-  // submitButton.onclick = function(){
-  //   showResults(questions, quizContainer, resultsContainer);
-  // }
 
 };
 
