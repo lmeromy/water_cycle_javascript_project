@@ -128,7 +128,7 @@ select {
   border: none;
 }
 
-label{
+.w_use_label{
   width: 45%;
 }
 
@@ -156,9 +156,24 @@ h4{
 
 #quiz-container {
   background: #BBDEF0;
-  /* justify-content: space-around; */
+  /* display: flex; */
+  justify-content: center;
 }
 
 #quiz {
   display: flex;
+  justify-content: space-around;
+}
+
+.q_and_a {
+  padding: 20px;
+}
+.answers {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+}
+
+#submit {
+  /* display: flex; */
 }
