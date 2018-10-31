@@ -83,10 +83,13 @@ body {
 
 #water-use-vis-chart {
   grid-area: water-use-vis-chart;
+  /* align-items: center; */
+  justify-self: center;
 }
 
 #water-use-invis-chart {
   grid-area: water-use-invis-chart;
+  justify-self: start;
 }
 
 #chart-text {
@@ -188,4 +191,11 @@ h4{
 
 #results {
   padding: 10px;
+}
+
+footer {
+  background: #0075C4;
+  padding: 5px;
+  color: white;
+  text-align: center;
 }
