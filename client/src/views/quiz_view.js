@@ -50,8 +50,10 @@ QuizView.prototype.buildQuiz = function (questions, quizContainer, resultsContai
       // add this question and its answers to the displayQuestions
       //note: .join is a js method which takes all the elements of an array and joins them into one string. In our case this will give us a big string of html which will render stuff in the DOM. Delimiter is passed in as an arguemnt. Default is a comma, but here we specify ''.
       displayQuestions.push(
-        '<div class="question">' + questions[i].question + '</div>'
-        + '<div class="answers">' + answers.join('') + '</div>'
+        '<div class="q_and_a">'
+        + ('<div class="question">' + questions[i].question + '</div>'
+        + '<div class="answers">' + answers.join('') + '</div>')
+        + '</div>'
       );
     }
 

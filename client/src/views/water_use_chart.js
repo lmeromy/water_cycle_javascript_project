@@ -46,7 +46,7 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
     const data = google.visualization.arrayToDataTable([
-      ["Average Water Use", "Your Water Use", { role: "style" } ],
+      ["Data", "Litres of water/day", { role: "style" } ],
       ["Average Water Use", chartArray[0], "green"],
       ["Your Water Use", chartArray[1], "blue"]
     ]);
@@ -56,7 +56,7 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
 
     const options = {
       title: "Visible Water Use: This is the water we get from our kitchen and bathroom sinks for drinking, brushing our teeth, washing ourselves, and cleaning our house.",
-      width: 350,
+      width: 600,
       height: 400,
       vAxis: {
         title: 'Litres of Water per day',
@@ -71,7 +71,7 @@ WaterUseChart.prototype.renderVis = function (chartArray) {
       backgroundColor: {
         fill: '#BBDEF0'
       },
-      bar: {groupWidth: "95%"},
+      bar: {groupWidth: "50%"},
       legend: { position: "none" },
     };
     const chart = new google.visualization.ColumnChart(document.getElementById("water-use-vis-chart"));
@@ -89,7 +89,7 @@ WaterUseChart.prototype.renderInvis = function (chartArray) {
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
     const data = google.visualization.arrayToDataTable([
-      ["Average UK Meat Diet", "Average UK Vegetarian Diet", { role: "style" } ],
+      ["Data", "Litres of water/day", { role: "style" } ],
       ["Average UK Meat Diet", chartArray[0], "red"],
       ["Average UK Vegetarian Diet", chartArray[1], "yellow"],
       ["Average UK Vegan Diet", chartArray[2], "green"],

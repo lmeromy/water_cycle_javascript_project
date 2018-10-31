@@ -83,10 +83,13 @@ body {
 
 #water-use-vis-chart {
   grid-area: water-use-vis-chart;
+  /* align-items: center; */
+  justify-self: center;
 }
 
 #water-use-invis-chart {
   grid-area: water-use-invis-chart;
+  justify-self: start;
 }
 
 #chart-text {
@@ -105,7 +108,7 @@ body {
   padding: 15px;
 }
 
-input {
+input, button {
     background-color: #404E4D;
     border: none;
     color: white;
@@ -116,12 +119,19 @@ input {
     font-size: 16px;
 }
 
+input:active, button:active, input:hover, button:hover {
+  color: #EFA00B;
+  background: white;
+  font-size: 14pt;
+  border: 1px solid black;
+}
+
 select {
   width: 20%;
   border: none;
 }
 
-label{
+.w_use_label{
   width: 45%;
 }
 
@@ -144,5 +154,48 @@ label{
 }
 
 h4{
+  text-align: center;
+}
+
+#quiz-container {
+  background: #BBDEF0;
+  /* display: flex; */
+  justify-content: center;
+}
+
+#quiz {
+  display: flex;
+  justify-content: space-around;
+}
+
+.q_and_a {
+  padding: 20px;
+}
+.answers {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+}
+
+#quiz_ends {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  align-items: center;
+}
+
+#submit {
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+#results {
+  padding: 10px;
+}
+
+footer {
+  background: #0075C4;
+  padding: 5px;
+  color: white;
   text-align: center;
 }
