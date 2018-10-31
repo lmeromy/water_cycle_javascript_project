@@ -174,6 +174,18 @@ h4{
   padding: 10px;
 }
 
+#quiz_ends {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  align-items: center;
+}
+
 #submit {
-  /* display: flex; */
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+#results {
+  padding: 10px;
 }
