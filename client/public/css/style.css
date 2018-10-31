@@ -105,7 +105,7 @@ body {
   padding: 15px;
 }
 
-input {
+input, button {
     background-color: #D65108;
     border: none;
     color: white;
@@ -114,6 +114,13 @@ input {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+input:active, button:active, input:hover, button:hover {
+  color: #EFA00B;
+  background: white;
+  font-size: 14pt;
+  border: 1px solid black;
 }
 
 select {
@@ -145,4 +152,13 @@ label{
 
 h4{
   text-align: center;
+}
+
+#quiz-container {
+  background: #BBDEF0;
+  /* justify-content: space-around; */
+}
+
+#quiz {
+  display: flex;
 }
