@@ -9,9 +9,10 @@ This was our 2nd CodeClan project, and was assigned to do in pairs. My partner, 
 3. Interactive tool for students to see their own water use based on daily habits and compare their habits to average UK users
 
 ## Technologies used:
-1. Javascript
-2. HTML
-3. CSS
-4. MongoDB
-5. Express
+* Javascript
+* HTML
+* CSS
+* MongoDB
+* Express
+* Google Charts
 
